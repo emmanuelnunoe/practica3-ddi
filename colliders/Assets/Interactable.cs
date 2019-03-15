@@ -36,6 +36,7 @@ public class Interactable : MonoBehaviour
 			if(Input.GetKeyDown(KeyCode.C))
 			{
 				Interact();
+
 			}
 		}
 	}
@@ -67,5 +68,7 @@ public class Interactable : MonoBehaviour
 	public virtual void Interact()
 	{
 		rend.material.color = newColor;
+		transform.localScale += new Vector3(0.1F, 0.1F, 0);
+
 	}
 }
